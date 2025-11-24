@@ -1,0 +1,467 @@
+/* ===============================
+   GLOBAL STYLES
+   =============================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #ffffff;
+  line-height: 1.6;
+}
+
+/* ===============================
+   HEADER + NAVIGATION
+   =============================== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 35px;
+  background: #ffffff;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* spacing between logo and company text */
+}
+.logo {
+  height: 100px; 
+  max-width: 450px;
+  width: auto;  
+  object-fit: contain;
+  display: block;
+  margin-top: 0;
+}
+
+/* Company Title Styling */
+.company-title h1 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 700;
+    color: #0c1b2a; /* same dark blue as your design */
+    letter-spacing: 2px;
+}
+
+.company-title p {
+    margin: 0;
+    font-size: 18px;
+    color: #d4a138; /* same gold color you used */
+    font-weight: 600;
+}
+
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  position: relative;
+  transform: translateY(18px); /* adjust the '18px' as needed */
+  transition: transform 0.2s;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Desktop dropdown */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background: #fff;
+    padding: 10px 0;
+    list-style: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li a {
+    padding: 10px 20px;
+    display: block;
+    color: #27548A;
+}
+
+.dropdown-menu li a:hover {
+    background: #f5f5f5;
+}
+
+/* Mobile (inside hamburger) */
+@media(max-width: 768px) {
+    .dropdown-menu {
+        position: relative;
+        box-shadow: none;
+    }
+}
+
+/* HAMBURGER */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  width: 28px;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  background: #000;
+  transition: 0.4s;
+}
+
+/* Hamburger Animation */
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 6px);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* MOBILE NAV */
+/* MOBILE — stack logo + text and shrink */
+@media(max-width: 768px) {
+    .logo-container {
+        gap: 10px;
+    }
+    .logo-img {
+        height: 55px;
+    }
+    .company-title h1 {
+        font-size: 22px;
+    }
+    .company-title p {
+        font-size: 14px;
+    }
+}
+.nav-links.mobile-open {
+  display: block !important;
+  position: absolute;
+  top: 80px;
+  right: 0;
+  background: white;
+  width: 200px;
+  padding: 20px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}
+
+.nav-links.mobile-open a {
+  display: block;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+@media (max-width: 768px) {
+  .nav-links {
+    transform: none;
+    position: static;
+  }
+}
+
+
+/* ===============================
+   HERO VIDEO
+   =============================== */
+.hero-video {
+  position: relative;
+  height: 480px;
+  overflow: hidden;
+}
+
+.bg-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.hero-video .hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  width: 70%;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+}
+
+.hero-content h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #F5C45E;
+}
+
+.hero-content p {
+  background: rgba(0,0,0,0.55);
+  padding: 15px;
+  border-radius: 5px;
+  text-align: justify;
+  
+}
+
+.btn-primary {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 25px;
+  background: #ffffff;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+/* ===============================
+   EXPERTS SECTION
+   =============================== */
+
+
+.experts {
+    padding: 80px 0; /* 1 inch top & bottom gap */
+    background: #fff;
+}
+
+.experts h2 {
+    color: black;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+/* GRID LAYOUT */
+.expert-grid {
+    width: 85%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;  /* spacing between cards */
+    
+}
+
+/* CARD */
+.expert-item {
+    background: #FAFDD6;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+
+    height: 500px; /* SAME HEIGHT FOR ALL */
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* CIRCLE IMAGES FIXED SIZE */
+.circle-img {
+    width: 140px;
+    height: 140px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+/* HEADINGS */
+.expert-item h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+    color: #1A3D64;
+}
+
+/* TEXT FIX & ALIGNMENT */
+.expert-item p {
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: justify;   /* straight edges like Wix */
+    flex-grow: 1;          /* pushes content up evenly */
+    max-width: 90%;
+}
+
+/* ARROW BUTTON — NEVER TOUCH TEXT AGAIN */
+.arrow-btn {
+    position: absolute;
+    bottom: 20px;       /* ALWAYS BELOW TEXT */
+    left: 50%;
+    transform: translateX(-50%);
+
+    padding: 5px 10px;
+    background: #27548A; 
+    border-radius: 6px;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+/* =============================
+   RESPONSIVE
+   ============================= */
+
+@media (max-width: 992px) {
+    .expert-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .expert-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .expert-item {
+        height: auto;
+        padding-bottom: 80px;
+    }
+}
+
+
+/* ===============================
+   LIFECYCLE SECTION
+   =============================== */
+.lifecycle {
+  padding: 60px;
+  background: linear-gradient(to right, #fff, #B4EBE6);
+}
+
+.lifecycle h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #000B58;
+  font-size: 30px;
+}
+
+.lifecycle-content {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 40px;
+}
+
+.lifecycle-img {
+  width: 500px;  /* increase width */
+  height: auto;
+  border-radius: 10px;
+}
+
+.lifecycle-text {
+  width: 40%;
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* ===============================
+   FOOTER
+   =============================== */
+footer {
+  position: relative;
+  background: #9AA6B2;
+  padding: 50px;
+  text-align: center;
+}
+
+.footer-links a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: white;
+}
+
+.footer-address {
+  margin-top: 20px;
+  color: white;
+  
+}
+
+.back a {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 12px;
+  text-decoration: none;
+  color: black;
+}
+.footer-social {
+    position: absolute;
+    bottom: 20px;
+    right: 25px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.footer-social a {
+    color: black; 
+    font-size: 24px;
+    transition: 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: white; /* your gold color */
+}
+
+/* ===============================
+   RESPONSIVE DESIGN
+   =============================== */
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .hero-content h1 {
+    font-size: 22px;
+  }
+
+  .hero-content p {
+    font-size: 13px;
+  }
+
+  .expert-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .circle-img {
+    width: 130px;
+    height: 130px;
+  }
+
+ /* Fix lifecycle on mobile */
+.lifecycle-content {
+  flex-direction: column;   /* stack image + text */
+  align-items: center;
+  text-align: center;
+}
+
+.lifecycle-img {
+  width: 100%;              /* FIX: make image responsive */
+  max-width: 350px;
+}
+
+.lifecycle-text {
+  width: 100%;
+  margin-top: 20px;
+  text-align: justify;      /* keep your formatting */
+}
+
+}
