@@ -73,6 +73,13 @@ body {
   font-weight: bold;
   font-size: 16px;
 }
+nav a:hover {
+  color: #EB8317;
+}
+nav a.active {
+    color: #EB8317;           
+    font-weight: bold;
+}
 
 /* Desktop dropdown */
 .dropdown-menu {
@@ -91,7 +98,7 @@ body {
 .dropdown-menu li a {
     padding: 10px 20px;
     display: block;
-    color: #27548A;
+    color: #002379;
 }
 
 .dropdown-menu li a:hover {
@@ -205,7 +212,7 @@ body {
 .hero-content h1 {
   font-size: 32px;
   margin-bottom: 20px;
-  color: #F5C45E;
+  color: #FFCC00;
 }
 
 .hero-content p {
@@ -239,7 +246,7 @@ body {
 
 .experts h2 {
     color: black;
-    font-size: 28px;
+    font-size: 30px;
     text-align: center;
     margin-bottom: 60px;
 }
@@ -256,9 +263,9 @@ body {
 
 /* CARD */
 .expert-item {
-    background: #FAFDD6;
+    background: #10375C;
     padding: 25px;
-    border-radius: 12px;
+    border-radius: 90px;
     text-align: center;
 
     height: 500px; /* SAME HEIGHT FOR ALL */
@@ -283,7 +290,7 @@ body {
 .expert-item h3 {
     font-size: 18px;
     margin-bottom: 12px;
-    color: #1A3D64;
+    color: #FFCC00;
 }
 
 /* TEXT FIX & ALIGNMENT */
@@ -293,6 +300,7 @@ body {
     text-align: justify;   /* straight edges like Wix */
     flex-grow: 1;          /* pushes content up evenly */
     max-width: 90%;
+    color: white;
 }
 
 /* ARROW BUTTON — NEVER TOUCH TEXT AGAIN */
@@ -303,7 +311,7 @@ body {
     transform: translateX(-50%);
 
     padding: 5px 10px;
-    background: #27548A; 
+    background: #FFBC4C; 
     border-radius: 6px;
     color: white;
     font-size: 20px;
@@ -336,14 +344,14 @@ body {
    =============================== */
 .lifecycle {
   padding: 60px;
-  background: linear-gradient(to right, #fff, #B4EBE6);
+  background: linear-gradient(to right, #fff, #c3e7f1);
 }
 
 .lifecycle h2 {
   text-align: center;
   margin-bottom: 40px;
   color: #000B58;
-  font-size: 30px;
+  font-size: 28px;
 }
 
 .lifecycle-content {
@@ -371,7 +379,7 @@ body {
    =============================== */
 footer {
   position: relative;
-  background: #9AA6B2;
+  background: #102E50;
   padding: 50px;
   text-align: center;
 }
@@ -393,8 +401,12 @@ footer {
   margin-top: 20px;
   font-size: 12px;
   text-decoration: none;
-  color: black;
+  color: #FFCC00;
 }
+footer back a:hover {
+  color: #EB8317;          
+}
+
 .footer-social {
     position: absolute;
     bottom: 20px;
@@ -405,13 +417,17 @@ footer {
 }
 
 .footer-social a {
-    color: black; 
+    color: white; 
     font-size: 24px;
     transition: 0.3s ease;
 }
 
+footer a:hover {
+  color: #EB8317;          
+}
+
 .footer-social a:hover {
-    color: white; /* your gold color */
+    color: #EB8317; 
 }
 
 /* ===============================
@@ -445,6 +461,7 @@ footer {
     width: 130px;
     height: 130px;
   }
+}
 
  /* Fix lifecycle on mobile */
 .lifecycle-content {
@@ -464,4 +481,232 @@ footer {
   text-align: justify;      /* keep your formatting */
 }
 
+
+/* CONTRACTS SECTION */
+
+.contracts-section {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    background: linear-gradient(#83a4d4, #b6fbff); 
+}
+
+.contracts-container {
+    display: flex;            
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.contracts-text {
+    width: 50%;
+    padding: 40px;
+    color: white;
+    text-align: justify;
+}
+
+.contracts-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.contracts-text h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+    font-weight: bold;
+    color: #deae35;
+}
+
+.contracts-text ul {
+    list-style: disc;
+    padding-left: 25px;
+}
+
+.contracts-text ul li {
+    margin-bottom: 8px;
+    font-size: 18px;
+    color: black;
+}
+
+/* RIGHT SIDE IMAGE */
+.contracts-image {
+    width: 50%;
+    margin: 0;
+    padding: 0;
+}
+
+.contracts-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+    .contracts-container {
+        flex-direction: column;   /* stack text over image */
+    }
+
+    .contracts-text {
+        width: 100%;              /* full width on mobile */
+        padding: 25px;
+    }
+
+    .contracts-image {
+        width: 100%;              /* full width image */
+    }
+
+    .contracts-image img {
+        height: auto;             /* prevent stretching */
+    }
+
+    .contracts-text p,
+    .contracts-text ul li {
+        font-size: 16px;          /* better mobile readability */
+    }
+}
+
+/* CONTACT SECTION */
+.contact-section {
+  width: 100%;
+  background-color: #EEEEEE;
+  padding: 80px 0 0;
+  font-family: "Segoe UI", sans-serif;
+  color: #222;
+}
+.contact-main-title {
+  text-align: center;
+  font-size: 2.3rem;
+  margin-bottom: 40px;
+  font-weight: 600;
+  color: #10375C
+}
+
+/* Two-column layout */
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px 60px;
+  border-bottom: 1px solid #ccc;
+  align-items: flex-start;
+}
+
+/* Left: Info */
+.contact-info {
+  flex: 1;
+  min-width: 300px;
+  padding-right: 40px;
+}
+
+.contact-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-info li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.contact-info li div {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-info strong {
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+}
+
+.contact-info i {
+  font-size: 1.3rem;
+  color: #e62727;
+  margin-right: 12px;
+  margin-top: 4px;
+}
+
+/* Right: Form */
+.contact-form {
+  flex: 1;
+  min-width: 320px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form .form-row {
+  display: flex;
+  gap: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 15px;
+  border: 1px solid #999;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  resize: none;
+}
+
+.contact-form textarea {
+  min-height: 120px;
+}
+
+.contact-form button {
+  background-color: #FFCC00;
+  color: black;
+  border: none;
+  padding: 10px 25px;
+  font-size: 1rem;
+  border-radius: 3px;
+  cursor: pointer;
+  align-self: flex-end;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #0e9652;
+}
+
+/* Map */
+.contact-map iframe {
+  width: 100%;
+  height: 400px;
+  border: none;
+  display: block;
+}
+
+.contact-info li {
+  display: grid;
+  grid-template-columns: 30px auto;   /* perfect alignment */
+  align-items: center;                /* centers icon + text */
+  justify-content: center;
+  width: 100%;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.contact-info i {
+  font-size: 1.3rem;
+  margin: 0 auto;                     /* centers icon */
+}
+
+.contact-info li div {
+  text-align: left;
+  width: 100%;
+  max-width: 260px;
 }

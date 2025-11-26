@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rehoboth TechBubble</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+  <header class="header">
+    <div class="logo-area">
+      <img src="images/logo.png" alt="Rehoboth Logo" class="logo" >
+    <div class="company-title">
+        <h1>REHOBOTH TECHBUBBLE</h1>
+        <p>Your Vision Our Tech</p>
+    </div>
+    </div>
+
+    <nav class="nav-links" id="navLinks">
+  <a href="index.html">Home</a>
+
+  <div class="dropdown">
+    <a href="services.html" class="dropdown-toggle">Services</a>
+    <ul class="dropdown-menu">
+      <li><a href="cloud-services.html">Cloud Services</a></li>
+      <li><a href="devops-services.html">DevOps Services</a></li>
+      <li><a href="software-development.html">Software Development</a></li>
+      <li><a href="testing-automation.html">Testing Automation</a></li>
+      <li><a href="digital-transformation.html">Digital Transformation</a></li>
+      <li><a href="website-development.html">Website Development</a></li>
+    </ul>
+  </div>
+
+  <a href="contract.html" class="active">Our Contracts</a>
+  <a href="contact.html">Contact us</a>
+</nav>
+
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+<!-- ===== OUR CONTRACTS PAGE START ===== -->
+
+<section class="contracts-section">
+   <div class="contracts-container">
+        <div class="contracts-text">
+            <p><b>
+                Rehoboth TechBubble is a trusted consultancy and professional IT services provider, supporting global
+                organizations in transforming innovative technologies into robust, high-value solutions. Our expertise
+                enables clients to achieve operational efficiency, long-term scalability, and a sustainable competitive advantage.
+            </p>
+
+            <h3><b>Our Contracts:</b></h3>
+            <ul>
+                <li>California IT Master Service Agreement (ITMSA)</li>
+                <li>California Multiple Award Schedule (CMAS) IT Services</li>
+                <li>California Small Business (SB) Micro</li></b>
+            </ul>
+        </div>
+
+        <div class="contracts-image">
+            <img src="images/contracts.jpg" alt="Contracts Image">
+        </div>
+
+    </div>
+</section>
+
+  <footer>
+    <div class="footer-links">
+      <a href="#">About Us</a>
+      <a href="#">Services</a>
+      <a href="#">Technical Blogs</a>
+      <a href="#">Contact us</a>
+    </div>
+    <div class="footer-address">3548 Hart Dr, Folsom, California 94158</div>
+    <div class="footer-social">
+    <a href="https://twitter.com/YourPage" target="_blank"><i class="fab fa-twitter"></i></a>
+    <a href="https://www.youtube.com/YourChannel" target="_blank"><i class="fab fa-youtube"></i></a>
+    <a href="https://www.linkedin.com/company/YourCompany" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+</div>
+    
+    <div class="back"><a href="#">Back to top</a></div>
+  </footer>
+
+  <!-- MOBILE MENU SCRIPT -->
+  <script>
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("navLinks");
+
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("mobile-open");
+      hamburger.classList.toggle("open");
+    });
+  </script>
+</body>
+</html>
