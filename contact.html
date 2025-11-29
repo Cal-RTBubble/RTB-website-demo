@@ -23,7 +23,7 @@
   <a href="index.html" >Home</a>
 
   <div class="dropdown">
-    <a href="services.html" class="dropdown-toggle">Services</a>
+    <span class="dropdown-toggle"><b>Services</b></span>
     <ul class="dropdown-menu">
       <li><a href="cloud-services.html">Cloud Services</a></li>
       <li><a href="devops-services.html">DevOps Services</a></li>
@@ -56,24 +56,15 @@
     <!-- Left: Contact Details -->
     <div class="contact-info">
       <ul>
-
         <li>
           <i class="fa fa-map-marker"></i>
           <div>
-            <strong>Mailing Address</strong>
-            <p>3548 Hart Dr, Folsom,<br> California 94158.</p>
-          </div>
-        </li>
-
-        <li>
-          <i class="fa fa-map-marker"></i>
-          <div>
-            <strong>Work Location</strong>
+            <strong>Office & Mailing Address</strong>
             <p>
-              10940 White Rock Rd,<br>
-              Suite 210 Office No 291,<br>
-              Rancho Cordova,<br>
-              Sacramento, <br>
+              10940 White Rock Rd,
+              Suite 210 Office No 291,
+              Rancho Cordova,
+              Sacramento,
               California – 95670.
             </p>
           </div>
@@ -81,14 +72,15 @@
 
         <li>
           <i class="fa fa-phone"></i>
-          <div><p>+1 (916) 318-8253</p></div>
+          <div>
+            <p><b>Phone number:</b> +1 (916) 318-8253</p></div>
         </li>
 
-        <li>
+       <li>
           <i class="fa fa-envelope"></i>
-          <div><p>info@rtbubble.com</p></div>
+          <div>
+            <p><b>Email to us at:</b> info@rtbubble.com</p></div>
         </li>
-
       </ul>
     </div>
 
@@ -126,11 +118,13 @@
   <footer>
     <div class="footer-links">
       <a href="#">About Us</a>
-      <a href="#">Services</a>
       <a href="#">Technical Blogs</a>
-      <a href="#">Contact us</a>
+      <a href="contact.html">Contact us</a>
     </div>
-    <div class="footer-address">3548 Hart Dr, Folsom, California 94158</div>
+    <div class="footer-address">
+              10940 White Rock Rd, Suite 210 Office No 291,<br>
+               Rancho Cordova, Sacramento, California – 95670.               
+              </div>
     <div class="footer-social">
     <a href="https://twitter.com/YourPage" target="_blank"><i class="fab fa-twitter"></i></a>
     <a href="https://www.youtube.com/YourChannel" target="_blank"><i class="fab fa-youtube"></i></a>
@@ -177,6 +171,11 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
         alert("Error sending message. Please try again.");
         console.log(error);
     });
+});
+</script>
+<script>
+document.querySelector(".dropdown-toggle").addEventListener("click", function(e) {
+    e.preventDefault(); // prevent page redirect
 });
 </script>
 </body>

@@ -23,7 +23,7 @@
   <a href="index.html">Home</a>
 
   <div class="dropdown">
-    <a href="services.html" class="dropdown-toggle">Services</a>
+    <span class="dropdown-toggle"><b>Services</b></span>
     <ul class="dropdown-menu">
       <li><a href="cloud-services.html">Cloud Services</a></li>
       <li><a href="devops-services.html">DevOps Services</a></li>
@@ -60,7 +60,9 @@
             <ul>
                 <li>California IT Master Service Agreement (ITMSA)</li>
                 <li>California Multiple Award Schedule (CMAS) IT Services</li>
-                <li>California Small Business (SB) Micro</li></b>
+                <li>California Small Business (SB) Micro</li>
+                <li>SpringField</li>
+                <li>Collabera</li></b>
             </ul>
         </div>
 
@@ -74,11 +76,11 @@
   <footer>
     <div class="footer-links">
       <a href="#">About Us</a>
-      <a href="#">Services</a>
       <a href="#">Technical Blogs</a>
-      <a href="#">Contact us</a>
+      <a href="contact.html">Contact us</a>
     </div>
-    <div class="footer-address">3548 Hart Dr, Folsom, California 94158</div>
+    <div class="footer-address">10940 White Rock Rd, Suite 210 Office No 291,<br>
+                                Rancho Cordova, Sacramento, California – 95670.</div>
     <div class="footer-social">
     <a href="https://twitter.com/YourPage" target="_blank"><i class="fab fa-twitter"></i></a>
     <a href="https://www.youtube.com/YourChannel" target="_blank"><i class="fab fa-youtube"></i></a>
@@ -98,5 +100,10 @@
       hamburger.classList.toggle("open");
     });
   </script>
+<script>
+document.querySelector(".dropdown-toggle").addEventListener("click", function(e) {
+    e.preventDefault(); // prevent page redirect
+});
+</script>
 </body>
 </html>
