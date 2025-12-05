@@ -253,7 +253,7 @@ nav a.active {
 }
 
 .experts h2 {
-    color: black;
+    color: #E8630A;
     font-size: 30px;
     text-align: center;
     margin-bottom: 60px;
@@ -317,13 +317,16 @@ nav a.active {
     bottom: 20px;       /* ALWAYS BELOW TEXT */
     left: 50%;
     transform: translateX(-50%);
-
     padding: 5px 10px;
     background: #FFBC4C; 
     border-radius: 6px;
     color: white;
     font-size: 20px;
     text-decoration: none;
+}
+
+.experts a:hover {
+  background-color: #E8630A;
 }
 
 /* =============================
@@ -705,6 +708,45 @@ footer a:hover {
 .contact-form button:hover {
   background-color: #0e9652;
 }
+
+/* ============================================
+   CONTACT SECTION — TABLET RESPONSIVE FIX
+   For screens between 768px and 1024px
+=============================================== */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .contact-container {
+        flex-direction: column;     /* stack vertically */
+        align-items: center;
+        gap: 30px;
+    }
+
+    .contact-info,
+    .contact-form {
+        width: 90% !important;      /* reduce width for tablet */
+        max-width: 700px;           /* prevent stretching too wide */
+    }
+
+    /* Fix form row fields overflowing */
+    .contact-form .form-row {
+        flex-direction: column;     /* stack side-by-side fields */
+        gap: 0;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 1rem;
+    }
+
+    .contact-info li {
+        grid-template-columns: 40px auto; /* more space for text */
+    }
+
+    .contact-info i {
+        font-size: 1.6rem;
+    }
+}
+
 
 /* MOBILE RESPONSIVE */
 @media (max-width: 850px) {
