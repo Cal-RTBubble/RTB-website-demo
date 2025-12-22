@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rehoboth TechBubble</title>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
@@ -12,11 +13,13 @@
 <body>
   <header class="header">
     <div class="logo-area">
+     <a href="index.html" class="logo-link">
       <img src="images/logo.png" alt="Rehoboth Logo" class="logo" >
     <div class="company-title">
         <h1>REHOBOTH TECHBUBBLE</h1>
         <p>Your Vision Our Tech</p>
     </div>
+    </a>
     </div>
 
     <nav class="nav-links" id="navLinks">
@@ -46,7 +49,7 @@
   </header>
 
   <!-- HERO SLIDER -->
-  <section class="hero-video">
+  <section class="hero-video reveal reveal-left">
   <video autoplay muted loop playsinline class="bg-video">
     <source src="video/hero-video.mp4" type="video/mp4">
   </video>
@@ -66,7 +69,7 @@
     <h2><b>WE ARE EXPERTS IN</b></h2>
 
     <div class="expert-grid">
-      <div class="expert-item">
+      <div class="expert-item reveal reveal-zoom reveal-delay-1">
         <div class="circle-img" style="background-image:url('images/cloud.jpg');"></div>
         <h3>Cloud services</h3>
         <p>Applications that are inherently designed to reflect the distributed nature of a cloud environment can adapt better to a cloud platform. 
@@ -74,7 +77,7 @@
         <a class="arrow-btn" href="cloud-services.html">➤</a>
       </div>
 
-      <div class="expert-item">
+      <div class="expert-item reveal reveal-zoom reveal-delay-2">
         <div class="circle-img" style="background-image:url('images/devops.jpg');"></div>
         <h3>DevOps services</h3>
         <p>DevOps is a methodology designed to align development and operation teams to deliver high quality software faster. 
@@ -82,7 +85,7 @@
         <a class="arrow-btn" href="devops-services.html">➤</a>
       </div>
 
-      <div class="expert-item">
+      <div class="expert-item reveal reveal-zoom reveal-delay-3">
         <div class="circle-img" style="background-image:url('images/software.jpg');"></div>
         <h3>Software Development</h3>
         <p>The development of reliable and scalable software solutions for any OS, browser and device. 
@@ -91,7 +94,7 @@
         <a class="arrow-btn" href="software-development.html">➤</a>
       </div>
 
-      <div class="expert-item">
+      <div class="expert-item reveal reveal-zoom reveal-delay-4">
         <div class="circle-img" style="background-image:url('images/testing.jpg');"></div>
         <h3>Testing Automation</h3>
         <p>Testing automation services include test automation planning, tools selection, test environment, 
@@ -100,7 +103,7 @@
         <a class="arrow-btn" href="testing-automation.html">➤</a>
       </div>
 
-      <div class="expert-item">
+      <div class="expert-item reveal reveal-zoom reveal-delay-5">
         <div class="circle-img" style="background-image:url('images/digital.jpg');"></div>
         <h3>Digital Transformation</h3>
         <p>Digital transformation should drive positive outcomes: whether it's streamlining processes, 
@@ -109,7 +112,7 @@
         <a class="arrow-btn" href="digital-transformation.html">➤</a>
       </div>
 
-      <div class="expert-item">
+      <div class="expert-item reveal reveal-zoom reveal-delay-6">
         <div class="circle-img" style="background-image:url('images/website.jpg');"></div>
         <h3>Website Development</h3>
         <p>The internet is a goldmine of opportunities for all kinds of business worldwide. 
@@ -119,23 +122,34 @@
       </div>
     </div>
   </section>
+
+
+
 <!-- SERVICE LIFECYCLE -->
-  <section class="lifecycle">
-    <h2><b>THE SERVICE MANAGEMENT LIFE CYCLE WE BELEIVE IN...</b></h2>
+
+  <section class="service-lifecycle-home">
+    <div class="service-image">
+  <video
+  src="video/lifecycle.mp4"
+  autoplay
+  muted
+  loop
+  playsinline
+ ></video>
+ </div>
     <div class="lifecycle-content">
-      <img src="images/lifecycle.jpg" class="lifecycle-img" />
-      <div class="lifecycle-text">
-        <p>
+      <h2>Our Service Management Approach</h2>
+      <p>
           Rehoboth TechBubble Inc.,  follows ITIL ,which is a compendium of best practices and offers necessary guidance. 
           We  consider it our topmost priority to " deliver value to the customers". We are willing to facilitate the outcome 
           the customers desire without them having to possess the ownership of specific costs and risks.
         </p>
         <p>
-          <br>We have specialized organizational capabilities to manage and implement quality IT services that meet the needs of the business. 
+          We have specialized organizational capabilities to manage and implement quality IT services that meet the needs of the business. 
          The service lifecycle we follow includes Service strategy, Service design, Service transition, Service operation and Continual Service Improvement.
         </p>
         <p>
-         <br>While planning for the services to provide, we decide on the needed resources and make sure to 
+         While planning for the services to provide, we decide on the needed resources and make sure to 
          record how the services meet the business requirements. Service design produces detailed plans for each service.
          Service design ensures that we document how resources are combines to meet the specification. Service transition handles
          the physical creation and implementation of resources. In this stage, infrastructure is acquired and installed and applications are developed. 
@@ -143,11 +157,11 @@
          makes sure that the aim of providing agreed - on services is ensured. This stage ensures that all the activities in every stage work well as possible, 
          the interprocess links are effective and that all evidence of shortcomings in other stages are captured.
          </p>
-      </div>
     </div>
   </section>
- 																				
 
+
+ 																		
   <footer class="rtb-footer">
 
     <!-- CENTER CONTENT: 4 COLUMNS -->
@@ -183,22 +197,6 @@
     <div class="back"><a href="#">Back to top</a></div>
 
 </footer>
-
-  <!-- MOBILE MENU SCRIPT -->
-  <script>
-    const hamburger = document.getElementById("hamburger");
-    const navLinks = document.getElementById("navLinks");
-
-    hamburger.addEventListener("click", () => {
-      navLinks.classList.toggle("mobile-open");
-      hamburger.classList.toggle("open");
-    });
-  </script>
-<script>
-document.querySelector(".dropdown-toggle").addEventListener("click", function(e) {
-    e.preventDefault(); // prevent page redirect
-});
-</script>
-
+<script src="main.js"></script>
 </body>
 </html>

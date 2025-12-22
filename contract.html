@@ -4,19 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rehoboth TechBubble</title>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
 <body>
   <header class="header">
-    <div class="logo-area">
+    <a href="index.html" class="logo-link">
       <img src="images/logo.png" alt="Rehoboth Logo" class="logo" >
     <div class="company-title">
         <h1>REHOBOTH TECHBUBBLE</h1>
         <p>Your Vision Our Tech</p>
     </div>
+    </a>
     </div>
 
     <nav class="nav-links" id="navLinks">
@@ -48,7 +50,7 @@
 <!-- ===== OUR CONTRACTS PAGE START ===== -->
 
 <section class="contracts-section">
-   <div class="contracts-container">
+   <div class="contracts-container reveal reveal-left reveal-very-slow">
         <div class="contracts-text">
             <p><b>
                 Rehoboth TechBubble is a trusted consultancy and professional IT services provider, supporting global
@@ -66,7 +68,7 @@
             </ul>
         </div>
 
-        <div class="contracts-image">
+        <div class="contracts-image reveal reveal-blur reveal-very-slow">
             <img src="images/contracts.jpg" alt="Contracts Image">
         </div>
 
@@ -108,21 +110,6 @@
     <div class="back"><a href="#">Back to top</a></div>
 
 </footer>
-
-  <!-- MOBILE MENU SCRIPT -->
-  <script>
-    const hamburger = document.getElementById("hamburger");
-    const navLinks = document.getElementById("navLinks");
-
-    hamburger.addEventListener("click", () => {
-      navLinks.classList.toggle("mobile-open");
-      hamburger.classList.toggle("open");
-    });
-  </script>
-<script>
-document.querySelector(".dropdown-toggle").addEventListener("click", function(e) {
-    e.preventDefault(); // prevent page redirect
-});
-</script>
+<script src="main.js"></script>
 </body>
 </html>

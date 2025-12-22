@@ -4,19 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rehoboth TechBubble</title>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style1.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
 <body>
   <header class="header">
-    <div class="logo-area">
+    <a href="index.html" class="logo-link">
       <img src="images/logo.png" alt="Rehoboth Logo" class="logo" >
     <div class="company-title">
         <h1>REHOBOTH TECHBUBBLE</h1>
         <p>Your Vision Our Tech</p>
     </div>
+    </a>
     </div>
 
     <nav class="nav-links" id="navLinks">
@@ -50,7 +52,7 @@
     <div class="testing-hero-container">
 
         <!-- Left Column -->
-        <div class="testing-hero-left">
+        <div class="testing-hero-left reveal reveal-left">
             <h1><b>Testing Automation</b></h1>
             <p><b>
                 We provide testing capabilities, knowledge, and technologies to companies that want to turn
@@ -61,9 +63,16 @@
         </div>
 
         <!-- Right Column - Auto Play Video -->
-        <div class="testing-hero-right">
-                 <img src="images/test-hero.jpg" alt="test automation image">
-        </div>
+        <div class="testing-hero-right reveal reveal-right">
+    <div class="testing-slider">
+        <img src="images/test-hero1.jpg" class="slide active" alt="Testing Automation 1">
+        <img src="images/test-hero2.jpg" class="slide" alt="Testing Automation 2">
+        <img src="images/test-hero3.jpg" class="slide" alt="Testing Automation 3">
+        <img src="images/test-hero4.jpg" class="slide" alt="Testing Automation 4">
+        <img src="images/test-hero5.jpg" class="slide" alt="Testing Automation 5">
+    </div>
+</div>
+
     </div>
 </section>
 
@@ -124,7 +133,7 @@
 
   <h2 class="testing-title"><b>Testing services</b></h2>
 
-  <div class="test-card left">
+  <div class="test-card left reveal reveal-left">
     <img src="images/test1.webp" class="test-icon" alt="icon">
     <div class="test-content">
       <h4>Testing Consultancy</h4>
@@ -135,7 +144,7 @@
     </div>
   </div>
 
-  <div class="test-card right">
+  <div class="test-card right reveal reveal-right">
     <div class="test-content">
       <h4>Autonomous Continuous Testing & Delivery</h4>
       <p>Our autonomous testing models reduce redundant test cases and focus on optimized scope reduction.
@@ -147,7 +156,7 @@
     <img src="images/test2.webp" class="test-icon" alt="icon">
   </div>
 
-  <div class="test-card left">
+  <div class="test-card left reveal reveal-left">
     <img src="images/test3.webp" class="test-icon" alt="icon">
     <div class="test-content">
       <h4>Intelligent QA Platform</h4>
@@ -159,7 +168,7 @@
     </div>
   </div>
 
-  <div class="test-card right">
+  <div class="test-card right reveal reveal-right">
     <div class="test-content">
       <h4>Performance & Security</h4>
       <p>We evaluate your applications, databases, and servers to ensure peak performance under real-world load.
@@ -171,7 +180,7 @@
     <img src="images/test4.webp" class="test-icon" alt="icon">
   </div>
 
-  <div class="test-card left">
+  <div class="test-card left reveal reveal-left">
     <img src="images/test5.webp" class="test-icon" alt="icon">
     <div class="test-content">
       <h4>Testing Managed Services</h4>
@@ -183,7 +192,7 @@
     </div>
   </div>
 
-  <div class="test-card right">
+  <div class="test-card right reveal reveal-right">
     <div class="test-content">
       <h4>Automation</h4>
       <p>We build custom automation frameworks for Web, Mobile, and API applications tailored to your needs.
@@ -198,7 +207,7 @@
 
 <section class="lifecycle-testing-section">
     <div class="lifecycle-testing-overlay"></div>
-    <div class="lifecycle-testing-center">
+    <div class="lifecycle-testing-center reveal reveal-zoom reveal-very-slow">
         <img src="images/testing-lifecycle.jpg" alt="Lifecycle Diagram">
     </div>
 </section>
@@ -238,22 +247,6 @@
     <div class="back"><a href="#">Back to top</a></div>
 
 </footer>
-
-  <!-- MOBILE MENU SCRIPT -->
-  <script>
-    const hamburger = document.getElementById("hamburger");
-    const navLinks = document.getElementById("navLinks");
-
-    hamburger.addEventListener("click", () => {
-      navLinks.classList.toggle("mobile-open");
-      hamburger.classList.toggle("open");
-    });
-  </script>
-<script>
-document.querySelector(".dropdown-toggle").addEventListener("click", function(e) {
-    e.preventDefault(); // prevent page redirect
-});
-</script>
-
+<script src="main.js"></script>
 </body>
 </html>

@@ -4,19 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rehoboth TechBubble</title>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style1.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
 <body>
   <header class="header">
-    <div class="logo-area">
+    <a href="index.html" class="logo-link">
       <img src="images/logo.png" alt="Rehoboth Logo" class="logo" >
     <div class="company-title">
         <h1>REHOBOTH TECHBUBBLE</h1>
         <p>Your Vision Our Tech</p>
     </div>
+    </a>
     </div>
 
     <nav class="nav-links" id="navLinks">
@@ -46,7 +48,7 @@
   </header>
 
 <!-- WEBSITE DEVELOPMENT HERO SECTION -->
-<section class="web-hero">
+<section class="web-hero reveal reveal-zoom reveal-very-slow">
 
     <!-- Background Video -->
     <video class="web-hero-bg-video" autoplay muted loop playsinline>
@@ -127,7 +129,7 @@
    <div class="web1-container">
 
         <!-- LEFT SIDE TEXT -->
-        <div class="web1-text">
+        <div class="web1-text reveal reveal-left reveal-very-slow">
             <h2><b>Webpages Created by Us</b></h2>
 
             <p>
@@ -161,10 +163,10 @@
 </section>
 
 <section class="web-contact-section">
-  <div class="web-contact-container">
+  <div class="web-contact-container reveal reveal-blur">
     <img src="images/web6.jpg" alt="contact Photo" class="web-contact-img">
 
-    <div class="web-contact-content">
+    <div class="web-contact-content reveal reveal-zoom reveal-very-slow">
       <h2>Ready to make your mark online?</h2>
       <p>
         We’re here and excited to build your digital presence with you.
@@ -209,58 +211,7 @@
     <div class="back"><a href="#">Back to top</a></div>
 
 </footer>
-
-  <!-- MOBILE MENU SCRIPT -->
-  <script>
-    const hamburger = document.getElementById("hamburger");
-    const navLinks = document.getElementById("navLinks");
-
-    hamburger.addEventListener("click", () => {
-      navLinks.classList.toggle("mobile-open");
-      hamburger.classList.toggle("open");
-    });
-  </script>
-<script>
-document.querySelector(".dropdown-toggle").addEventListener("click", function(e) {
-    e.preventDefault(); // prevent page redirect
-});
-</script>
-<script>
-const boxes = document.querySelectorAll(".web-diff-box");
-const contents = document.querySelectorAll(".web-diff-content");
-
-boxes.forEach(box => {
-  box.addEventListener("click", () => {
-
-    // remove old active state
-    boxes.forEach(b => b.classList.remove("active"));
-    contents.forEach(c => c.classList.remove("active"));
-
-    // activate clicked
-    box.classList.add("active");
-    document.getElementById(box.dataset.target).classList.add("active");
-  });
-});
-</script>
-<script>
-function toggleMenu() {
-  document.getElementById('nav-menu').classList.toggle('active');
-}
-</script>
-
-<script>
-let currentSlide1 = 0;
-const web1Slides = document.querySelectorAll(".web1-slide");
-
-setInterval(() => {
-    web1Slides[currentSlide1].classList.remove("active");
-
-    currentSlide1 = (currentSlide1 + 1) % web1Slides.length;
-
-    web1Slides[currentSlide1].classList.add("active");
-
-}, 3000);
-</script>
+<script src="main.js"></script>
 
 </body>
 </html>

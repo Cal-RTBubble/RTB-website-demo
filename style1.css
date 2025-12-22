@@ -8,9 +8,17 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Open Sans', sans-serif;
   background: #ffffff;
-  line-height: 1.6;
+  line-height: 1.7;
+  color: #333;
+  padding-top: 130px; 
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  color: #0c1b2a;
+  letter-spacing: 0.4px;
 }
 
 img {
@@ -23,19 +31,93 @@ html, body {
 }
 
 /* ===============================
+   SCROLL REVEAL ANIMATION
+   =============================== */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-very-slow {
+  transition-duration: 2s;
+}
+
+
+/* ZOOM IN REVEAL */
+.reveal-zoom {
+  transform: scale(0.9);
+}
+
+.reveal-zoom.active {
+  transform: scale(1);
+}
+
+/* From left */
+.reveal-left {
+  transform: translateX(-50px);
+}
+.reveal-left.active {
+  transform: translateX(0);
+}
+
+/* From right */
+.reveal-right {
+  transform: translateX(40px);
+}
+.reveal-right.active {
+  transform: translateX(0);
+}
+
+/* Fade only */
+.reveal-fade {
+  transform: none;
+}
+
+.reveal-zoom-out {
+  transform: scale(1.1);
+}
+
+.reveal-blur {
+  filter: blur(8px);
+  transform: translateY(20px);
+}
+
+.reveal-blur.active {
+  filter: blur(0);
+}
+
+.reveal-flip {
+  transform: rotateX(20deg);
+  transform-origin: top;
+}
+
+/* ===============================
    HEADER + NAVIGATION
    =============================== */
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   padding: 15px 35px;
-  background: #ffffff;
+  background-color: #ffffff;
+
   border-bottom: 1px solid #ddd;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  z-index: 9999;
 }
+
 .logo-area {
     display: flex;
     align-items: center;
@@ -48,6 +130,17 @@ html, body {
   object-fit: contain;
   display: block;
   margin-top: 0;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-decoration: none;
+}
+
+.logo-link:hover {
+  cursor: pointer;
 }
 
 /* Company Title Styling */
@@ -68,11 +161,13 @@ html, body {
 
 .nav-links {
   display: flex;
-  gap: 20px;
+  gap: 28px;
   align-items: center;
   position: relative;
-  transform: none !important; 
+  transform: translateY(18px); 
   transition: transform 0.2s;
+  margin-left: auto;
+  margin-right: 80px;
 }
 
 .nav-links a {
@@ -372,11 +467,20 @@ nav a.active {
 .cloud-hero {
   width: 100%;
   height: 420px;
-  background-image: url("images/hero-cloud.jpg");
   background-size: cover;
   background-position: center;
   position: relative;
   padding: 30px 40px 70px;
+}
+
+/* CLOUD HERO BACKGROUND VIDEO */
+.cloud-hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
 }
 
 .cloud-hero-box {
@@ -459,6 +563,11 @@ nav a.active {
 .help-card ul {
   padding-left: 20px;
 }
+
+.help-card:nth-child(1) { transition-delay: 0.1s; }
+.help-card:nth-child(2) { transition-delay: 0.25s; }
+.help-card:nth-child(3) { transition-delay: 0.4s; }
+.help-card:nth-child(4) { transition-delay: 0.55s; }
 
 
 /* -----------------------
@@ -574,6 +683,17 @@ nav a.active {
   color: #001E6C;
   text-align: center;
 }
+
+.reveal-delay-1  { transition-delay: 0s; }
+.reveal-delay-2  { transition-delay: 0.25s; }
+.reveal-delay-3  { transition-delay: 0.5s; }
+.reveal-delay-4  { transition-delay: 0.75s; }
+.reveal-delay-5  { transition-delay: 1s; }
+.reveal-delay-6  { transition-delay: 1.25s; }
+.reveal-delay-7  { transition-delay: 1.5s; }
+.reveal-delay-8  { transition-delay: 1.75s; }
+.reveal-delay-9  { transition-delay: 2s; }
+.reveal-delay-10 { transition-delay: 2.25s; }
 
 
 /* -----------------------
@@ -747,7 +867,7 @@ nav a.active {
     display: flex;
     align-items: center;
     gap: 60px;
-    animation: toolsScroll 7s linear infinite;
+    animation: toolsScroll 5s linear infinite;
 }
 
 .tools-track img {
@@ -905,15 +1025,14 @@ nav a.active {
 
 .lifecycle-right h2 {
     font-size: 40px;
-    color: #E8630A;
     padding-left: 40px 30px;
     text-align: center;
+    color: #10375C;
 }
 .lifecycle-right p {
     font-size: 18px;
     padding: 50px 20px 30px;
     text-align: justify;
-    color: #4a96c9;
 }
 
 /* circle container */
@@ -927,15 +1046,15 @@ nav a.active {
 /* Each item */
 .life-item {
     position: absolute;
-    width: 140px;
+    width: 100px;
     text-align: center;
     transform: translate(-50%, -50%);
 }
 
 /* icon shape */
 .life-item img {
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: 6 0px;
     background: white;
     border-radius: 10%;
     padding: 2px;
@@ -953,8 +1072,9 @@ nav a.active {
 .arrow {
     position: absolute;
     font-size: 40px;
-    color: #10375C;
+    color: #FFCC00;
     font-weight: bold;
+    
 }
 
 /* CIRCLE POSITIONS (PERFECT 6-POINT ROTATION) */
@@ -966,12 +1086,12 @@ nav a.active {
 .item-6 { top: 25%; left: 15%; }
 
 /* Arrow positions */
-.arrow-1 { top: 25%; left: 115%; transform: rotate(25deg); }
+.arrow-1 { top: 30%; left: 140%; transform: rotate(25deg); }
 .arrow-2 { top: 85%; left: 90%; transform: rotate(85deg); }
-.arrow-3 { top: 120%; left: 10%; transform: rotate(150deg); }
-.arrow-4 { top: 25%; left: -80%; transform: rotate(-135deg); }
+.arrow-3 { top: 135%; left: -50%; transform: rotate(150deg); }
+.arrow-4 { top: 20%; left: -110%; transform: rotate(-135deg); }
 .arrow-5 { top: -50%; left: 10%; transform: rotate(-65deg); }
-.arrow-6 { top: -40%; left: 80%; transform: rotate(-20deg); }
+.arrow-6 { top: -50%; left: 100%; transform: rotate(-20deg); }
 
 
 /* ================================
@@ -1224,16 +1344,30 @@ nav a.active {
     overflow: hidden;
 }
 
-/* FULL BACKGROUND VIDEO */
-.hero-bg-video {
+/* ------------------------------
+   SOFTWARE HERO IMAGE SLIDER
+------------------------------ */
+
+.hero-bg-slider {
     position: absolute;
-    top: 0;
-    left: 0;
+    inset: 0;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.hero-slide {
+    position: absolute;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: 1;
+    opacity: 0;
+    transition: opacity 1.2s ease-in-out;
 }
+
+.hero-slide.active {
+    opacity: 1;
+}
+
 
 /* ------------------------------------------------------DESCRIPTION BOX */
 .hero-content-box {
@@ -1241,25 +1375,26 @@ nav a.active {
     bottom: 60px;
     right: 50px;
     width: 45%;
-    background: #10375C;
+    background: #EAEFEF;
     padding: 20px 15px;
     border-radius: 10px;
     z-index: 5;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
 .hero-content-box h1 {
     font-size: 30px;
-    color:  #FFBC4C;
+    color:  #E8630A;
     text-align: center;
     margin-bottom: 10px;
-    font-weight: 700;
+    
 }
 
 .hero-content-box p {
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 1.6;
-    color: #fff;
+    color: #10375C;
     text-align: justify;
 }
 
@@ -1417,6 +1552,15 @@ nav a.active {
 }
 
 .delivery-item p{ margin: -20px 0 0; color: #E8630A; font-size:17px; }
+
+.reveal-delay-1 { transition-delay: 0.2s; }
+.reveal-delay-2 { transition-delay: 0.45s; }
+.reveal-delay-3 { transition-delay: 0.7s; }
+.reveal-delay-4 { transition-delay: 0.95s; }
+.reveal-delay-5 { transition-delay: 1.2s; }
+.reveal-delay-6 { transition-delay: 1.45s; }
+.reveal-delay-7 { transition-delay: 1.7s; }
+.reveal-delay-8 { transition-delay: 1.95s; }
 
 /* ==========================================================
    TABLET RESPONSIVE (769px – 1024px)
@@ -1728,6 +1872,31 @@ nav a.active {
     box-shadow: 0 4px 18px rgba(0,0,0,0.18);
 }
 
+/* TESTING HERO IMAGE SLIDER */
+.testing-slider {
+    position: relative;
+    width: 90%;
+    height: 450px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.18);
+}
+
+.testing-slider .slide {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.testing-slider .slide.active {
+    opacity: 1;
+}
+
+
 /* ===========================
    MARQUEE SECTION
 =========================== */
@@ -1756,8 +1925,6 @@ nav a.active {
     display: flex;
     align-items: center;
     gap: 60px;
-
-    /* 🔥 The ACTUAL smooth loop fix */
     animation: scrollMarquee 40s linear infinite;
     width: max-content; 
 }
@@ -2052,16 +2219,16 @@ height: 460px;
 overflow: hidden;
 }
 
-.digi-hero-bg {
-width: 100%;
-height: 100%;
-background-image: url('images/hero-digi.jpg');
-background-size: cover;
-background-position: center;
-position: absolute;
-top: 0;
-left: 0;
+.digi-hero-bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
 }
+
 
 .digi-hero-content {
 position: absolute;
@@ -2071,7 +2238,7 @@ transform: translate(-50%, -50%);
 color: white;
 text-align: center;
 width: 70%;
-text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+z-index: 2;
 }
 
 .digi-hero-content h1 {
@@ -2082,11 +2249,18 @@ color: #98DED9;
 
 
 .digi-hero-content p {
-background: rgba(0,0,0,0.55);
 padding: 15px;
 font-size: 19px;
 border-radius: 5px;
 text-align: justify;
+}
+
+.digi-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
 }
 
 
@@ -2445,7 +2619,7 @@ margin: 0;
   padding: 18px 15px;
   background: #ECF2FF;
   border: 0px solid #3E54AC;
-  border-radius: 0px;
+  border-radius: 35px;
   cursor: pointer;
   transition: 0.3s;
   font-weight: 600;
@@ -2484,10 +2658,10 @@ margin: 0;
 /* MAIN SECTION */
 .web1-section {
     width: 100%;
-    height: 480px;
+    height: 380px;
     margin: 0;
     display: flex;
-    background: linear-gradient(#B7A3E3, #b6fbff);
+    background: linear-gradient(#fff, #c3e7f1);
 }
 
 .web1-container {
@@ -2500,7 +2674,7 @@ margin: 0;
 .web1-text {
     width: 50%;
     padding: 40px;
-    color: white;
+    color: #10375C;
     text-align: justify;
 }
 
@@ -2512,7 +2686,7 @@ margin: 0;
 
 .web1-text p {
     font-size: 20px;
-    line-height: 1.6;
+    line-height: 1.6; 
 }
 
 /* RIGHT SIDE SLIDER AREA */
@@ -2524,6 +2698,7 @@ margin: 0;
 
 .web1-slide {
     position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
     opacity: 0;
@@ -2534,6 +2709,7 @@ margin: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block; 
 }
 
 /* Active slide */

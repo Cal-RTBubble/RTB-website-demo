@@ -4,19 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rehoboth TechBubble</title>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style1.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
 <body>
   <header class="header">
-    <div class="logo-area">
+    <a href="index.html" class="logo-link">
       <img src="images/logo.png" alt="Rehoboth Logo" class="logo" >
     <div class="company-title">
         <h1>REHOBOTH TECHBUBBLE</h1>
         <p>Your Vision Our Tech</p>
     </div>
+    </a>
     </div>
 
     <nav class="nav-links" id="navLinks">
@@ -46,8 +48,11 @@
   </header>
 
 <!-- DIGITAL TRANSFORMATION HERO IMAGE -->
-<section class="digi-hero">
-<div class="digi-hero-bg"></div>
+<section class="digi-hero  reveal reveal-fade reveal-very-slow">
+<video class="digi-hero-bg-video" autoplay muted loop playsinline>
+  <source src="video/digital-hero.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 <div class="digi-hero-content">
 <h1><b>Digital Transformation</b></h1>
 <p><b>In today's fast-paced hybrid cloud world, being at business speed means overcoming
@@ -63,14 +68,14 @@
 
 
 <div class="digi-grid">
-<div class="digi-item">
+<div class="digi-item reveal reveal-zoom-out">
 <div class="digi-img" style="background-image:url('images/digi1.webp');"></div>
 <h3>Modernized IT platforms</h3>
 <p>Modernise data centre technologies and evolve your IT operating model for greater efficiency with hybrid IT, SAP, HANA and Microsoft Azure stack.</p>
 </div>
 
 
-<div class="digi-item">
+<div class="digi-item reveal reveal-zoom-out">
 <div class="digi-img" style="background-image:url('images/digi2.webp');"></div>
 <h3>AR and VR in the workplace</h3>
 <p>Extended reality helps boost workforce performance by reimagining how work is done. 
@@ -78,21 +83,21 @@ This combination of Augmented Reality, Virtual reality and Mixed Reality can hel
 </div>
 
 
-<div class="digi-item">
+<div class="digi-item reveal reveal-zoom-out">
 <div class="digi-img" style="background-image:url('images/digi3.webp');"></div>
 <h3>AI and data services</h3>
 <p>Artificial intelligence and blockchain services help accelerate successful innovation using advanced analytics and a simplified big data foundation.</p>
 </div>
 
 
-<div class="digi-item">
+<div class="digi-item reveal reveal-zoom-out">
 <div class="digi-img" style="background-image:url('images/digi4.webp');"></div>
 <h3>Security and protection services</h3>
 <p>Services for enterprise security and adaptive protection that fortify your data's confidentiality, integrity and availability in hybrid IT and at the edge.</p>
 </div>
 
 
-<div class="digi-item">
+<div class="digi-item reveal reveal-zoom-out">
 <div class="digi-img" style="background-image:url('images/digi5.webp');"></div>
 <h3>Container Management Services</h3>
 <p>Help your organization adapt rapidly in the age of application agility.
@@ -100,7 +105,7 @@ Empower your teams with scalable, automated container management that accelerate
 </div>
 
 
-<div class="digi-item">
+<div class="digi-item reveal reveal-zoom-out">
 <div class="digi-img" style="background-image:url('images/digi6.webp');"></div>
 <h3>Network, workplace and IoT services</h3>
 <p>Redefine experiences for customers and employees, and harness the intelligent edge to drive innovation and growth.</p>
@@ -110,12 +115,12 @@ Empower your teams with scalable, automated container management that accelerate
 
 <section class="digital-process-section">
     <div class="digital-process-overlay"></div>
-    <div class="digital-process-center">
+    <div class="digital-process-center reveal reveal-zoom reveal-very-slow">
         <img src="images/digi7.webp" alt="digital-process-image">
     </div>
 </section>
 
-<section class="digi-support">
+<section class="digi-support reveal reveal-right reveal-very-slow">
     <div class="digi-support-overlay"></div>
 
     <div class="digi-support-center">
@@ -161,23 +166,7 @@ Empower your teams with scalable, automated container management that accelerate
     <div class="back"><a href="#">Back to top</a></div>
 
 </footer>
-
-  <!-- MOBILE MENU SCRIPT -->
-  <script>
-    const hamburger = document.getElementById("hamburger");
-    const navLinks = document.getElementById("navLinks");
-
-    hamburger.addEventListener("click", () => {
-      navLinks.classList.toggle("mobile-open");
-      hamburger.classList.toggle("open");
-    });
-  </script>
-<script>
-document.querySelector(".dropdown-toggle").addEventListener("click", function(e) {
-    e.preventDefault(); // prevent page redirect
-});
-</script>
-
+<script src="main.js"></script>
 </body>
 </html>
 
